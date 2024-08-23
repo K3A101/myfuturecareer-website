@@ -12,3 +12,35 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+
+.hero {
+    display: grid;
+    grid-template-columns:  1fr;
+    min-height: 100vh;
+
+    .left-section {
+        padding: 5rem;
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .right-section {
+        background: color(primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+}
+
+@media (min-width: 45rem) {
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+}
