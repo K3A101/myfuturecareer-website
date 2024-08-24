@@ -17,7 +17,8 @@ body {
 .hero {
     display: grid;
     grid-template-columns:  1fr;
-    min-height: 100vh;
+    min-height: 100%;
+    
 
     .left-section {
         padding: 5rem;
@@ -36,11 +37,20 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100%;
+
+            img {
+                opacity: 0.8;
+                
+                width:100%;
+                object-fit: cover;
+            }
     }
 }
 
 @media (min-width: 45rem) {
     .hero {
         grid-template-columns: 1fr 1fr;
+        align-items: center;
     }
 }
