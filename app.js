@@ -1,6 +1,10 @@
+require("dotenv").config();
 const express = require('express');
 const app = express();
-const port = 3000;
+let PORT;
+process.env.STATUS === 'production'
+    ? (PORT = process.env.PROD_PORT)
+    : (PORT = process.env.DEV_PORT);
 const router = require('./routes/route');
 
 
@@ -11,13 +15,7 @@ app.set('view engine', 'html');
 
 app.use('/', router);
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World!')
-// })
-// app.get('/diensten', (req, res) => {
-//     res.send('Dienst')
-// })
 
-app.listen(port, () => {
-    console.log(` http://localhost:${port}`)
+app.listen(PORT, () => {
+    console.log(`Server in ${process.env.STATUS} listening in http://localhost:${PORT}`)
 })
