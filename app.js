@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PROD_PORT || 3403
+const hostname = "127.0.0.1"
+const PORT = process.env.PORT || 3043;
 const router = require('./routes/route');
 
 
