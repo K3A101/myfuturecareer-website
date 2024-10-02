@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3043;
 const router = require('./routes/route');
 
 
-app.use(express.static('static'));
+app.use(express.static('public'));
 app.engine('html', require('ejs').__express);
 app.set("views", "./views");
 app.set('view engine', 'html');
