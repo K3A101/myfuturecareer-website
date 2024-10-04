@@ -51,7 +51,7 @@ body {
 .services-section {
 
     background: color(background);
-    padding: 3rem 0;
+    padding: 5rem 0;
     width: 100%;
 
     .services-list {
@@ -74,6 +74,19 @@ body {
         }
     }
 
+}
+
+.company-goal {
+    background: color(background);
+    padding: 4rem 0;
+}
+
+.contact-form {
+    padding: 4rem 0;
+}
+
+#bottom {
+    background: color(primary);
 }
 
 @media (min-width: 45rem) {
