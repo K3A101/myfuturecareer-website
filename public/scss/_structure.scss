@@ -87,6 +87,14 @@ body {
 
 #bottom {
     background: color(primary);
+    padding: 3rem;
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+
+      
+    }
 }
 
 @media (min-width: 45rem) {
