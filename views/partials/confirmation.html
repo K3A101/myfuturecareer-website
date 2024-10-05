@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head.html') %>
+</head>
+
+<body>
+    <header id="top">
+        <%- include('menu.html') %>
+    </header>
+
+    <main id="content">
+
+        <% if (confirmation) { %>
+         <h1 class="submission-message"><%= confirmation %></h1>
+        <% } %>
+     
+    </main>
+    <footer id="bottom">
+        <%- include('footer.html') %>
+    </footer>
+
+</body>
+
+</html>

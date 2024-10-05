@@ -23,5 +23,22 @@ router.get('/', async (req, res) => {
     })
 })
 
+router.post('/confirmation', async (req, res) => {
+    const { error } = await supabase
+        .from('posts')
+        .insert({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            message: req.body.message
+        })
+    if (error) {
+        res.send(error);
+    }
+    res.render('partials/confirmation', {
+        title: "Bevestiging",
+        confirmation: "Je bericht is verstuurd!",
+    });
+});
 
 module.exports = router;

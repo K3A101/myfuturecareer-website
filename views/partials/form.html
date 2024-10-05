@@ -1,17 +1,17 @@
-<form action="/" method="post">
+<form action="/confirmation" method="post">
     <h2>Neem contact op!</h2>
     <label class="first-name">
         <span>Naam</span>
-        <input type="text" name="name">
+        <input type="text" name="first_name">
     </label>
 
     <label class="last-name">
         <span>Achternaam</span>
-        <input type="text" name="surname">
+        <input type="text" name="last_name">
     </label>
 
     <label class="email">
-        <span>email</span>
+        <span>Email</span>
         <input type="email" name="email">
     </label>
 
@@ -20,4 +20,5 @@
           <textarea name="message" id="message"></textarea>
     </label>
   
+    <button class="button" type="submit">Stuur een bericht</button>
 </form>
