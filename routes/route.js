@@ -9,17 +9,19 @@ const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 
-router.get('/', (req, res) => {
-    res.render('index', {
-        title: "My Future Career | Adviesbureau"
-    })
-})
-
-router.get('/services', async (req, res) => {
+router.get('/', async (req, res) => {
     const { data, error } = await supabase
         .from('services')
         .select()
-        res.send(data);
+    if (error) {
+        return res.status(500).send('Error fetching services');
+    }
+
+    res.render('index', {
+        title: "My Future Career | Adviesbureau",
+        services: data,
+    })
 })
+
 
 module.exports = router;

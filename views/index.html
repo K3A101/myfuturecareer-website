@@ -68,40 +68,15 @@
             <div class="container">
                 <h2>Diensten die wij aanbieden</h2>
                 <div class="services-list">
+                    <% services.forEach(service=> { %>
                     <article class="service">
-                        <h3>Studiekeuze begeleiding</h3>
-                        <p>My Future Career helpt scholieren en studenten op een simpele en snelle, maar zeer effectief
-                            traject, om een juiste
-                            sector of profiel keuze te maken en een opleiding op Curaçao, in Nederland of in de regio te
-                            volgen. We helpen ook
-                            studenten met een lichamelijke beperking die willen gaan studeren in Nederland.
-                        </p>
-
+                        <h3><%= service.service_title %></h3>
+                        <p><%= service.service_description %> </p>
+                    
                         <a href="#" class="button">Bekijk dit traject</a>
-
+                    
                     </article>
-                    <article class="service">
-                        <h3>Trainingen en workshops</h3>
-                        <p>Wij bieden diverse workshops en trainingen op maat aan voor studenten, ouders,
-                            decanen/mentoren en bedrijven. Wij geven
-                            ook wekelijks lezingen en voorlichting omtrent studiekeuze en aanmelding, ontdekking van
-                            talenten, aanvragen
-                            studiefinanciering, studeren op Curaçao of in de regio, en wonen en studeren in Nederland.
-                        </p>
-
-                        <a href="#" class="button">Bekijk dit traject</a>
-
-                    </article>
-                    <article class="service">
-                        <h3>Tussenjaar begeleiding</h3>
-                        <p>Niet alle studenten willen na het behalen van een diploma meteen starten met een vervolgstudie. Wij bieden deze
-                        studenten een traject aan, waarbij zij onder professionele begeleiding een plan maken om hun tussenjaar nuttig in te
-                        vullen en waardevolle levens- en/of werkervaring op te doen in het jaar dat ze niet studeren. </p>
-
-
-                        <a href="#" class="button">Bekijk dit traject</a>
-
-                    </article>
+                    <% }) %>
                 </div>
 
             </div>
