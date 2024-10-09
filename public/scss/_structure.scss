@@ -21,7 +21,7 @@ body {
 
 
     .left-section {
-        padding: 5rem;
+        padding: 5rem 1rem;
 
         h1 {
             margin-bottom: 2rem;
@@ -56,7 +56,7 @@ body {
 
     .services-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         grid-auto-rows: minmax(100px, auto);
         gap: 2.4rem;
 
@@ -71,6 +71,10 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            p {
+                margin: 1rem 0;
+            }
         }
     }
 
@@ -87,13 +91,24 @@ body {
 
 #bottom {
     background: color(primary);
-    padding: 3rem;
+    padding: 1.6rem;
 
     .footer-content {
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        width: 100%;
+       
 
       
+    }
+}
+
+.map {
+    width:100%;
+    height:45rem;
+
+    iframe {
+        width:100%;
+        height:100%;
     }
 }
 
@@ -101,5 +116,19 @@ body {
     .hero {
         grid-template-columns: 1fr 1fr;
         align-items: center;
+
+        .left-section {
+                padding: 5rem;
+        }
+    }
+
+    #bottom {
+        padding: 3rem;
+         
+        .footer-content {
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+        }
     }
 }
+
