@@ -1,5 +1,6 @@
 require("dotenv").config();
-const { createClient } = require('@supabase/supabase-js') 
+const { createClient } = require('@supabase/supabase-js');
+const { Resend } = require('resend'); 
 
 const supabaseUrl = process.env.SUPABASE_URL
 const supabaseKey = process.env.SUPABASE_KEY
@@ -27,3 +28,4 @@ app.use('/', router);
 app.listen(PORT, () => {
     console.log(`Server listening in http://localhost:${PORT}`)
 })
+
