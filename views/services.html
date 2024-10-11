@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <%- include('./partials/head.html') %>
+</head>
+<body>
+    <h1>Services</h1>
+
+    <article class="lists">
+        <ul>
+            <% services.forEach(service=> { %>
+                <li>
+                    <%= service.service_title %>
+                </li>
+                <% }) %>
+        </ul>
+    </article>
+    
+</body>
+</html>
