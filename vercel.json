@@ -10,7 +10,7 @@
         {
             "src": "/(.*)",
             "headers": {
-                "Content-Security-Policy": "default-src '*'; font-src '*' https://myfuturecareer.vercel.app; script-src '*'; style-src '*'"
+                "Content-Security-Policy": "default-src *; font-src * https://myfuturecareer.vercel.app; script-src *; style-src *"
             }
         }
     ]
