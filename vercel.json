@@ -11,7 +11,7 @@
             "src": "/(.*)",
             "dest": "/app.js",
             "headers": {
-                "Content-Security-Policy": "default-src * data:; font-src *data:; script-src * data:; style-src * data:; connect-src  *data:; img-src * data:; frame-src * data:;"
+                "Content-Security-Policy": "default-src * data:; font-src * data:; script-src * data:; style-src * data:; connect-src * data:; img-src * data:; frame-src * data:;"
             }
         }
     ]
