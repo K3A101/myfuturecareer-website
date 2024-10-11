@@ -9,6 +9,7 @@
     "routes": [
         {
             "src": "/(.*)",
+            "dest": "/app.js",
             "headers": {
                 "Content-Security-Policy": "default-src *; font-src * https://myfuturecareer.vercel.app; script-src *; style-src *"
             }
