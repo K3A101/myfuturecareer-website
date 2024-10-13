@@ -1,6 +1,5 @@
 const { Resend } = require('resend');
 const express = require("express");
-const app = express();
 const router = express.Router();
 
 const { createClient } = require('@supabase/supabase-js')
@@ -42,28 +41,28 @@ router.post('/confirmation', async (req, res) => {
     });
 });
 
-// const resendApiKey = process.env.RESEND_API_KEY
+const resendApiKey = process.env.RESEND_API_KEY
 
-// const resend = new Resend(resendApiKey);
+const resend = new Resend(resendApiKey);
 
-// router.get("/test", async (req, res) => {
-//     try {
-//         const { data, error } = await resend.emails.send({
-//             from: "Acme <alexanderkeisha9@gmail.com>",
-//             to: ["alexanderkeisha9@gmail.com"],
-//             subject: "hello world",
-//             html: "<strong>it works!</strong>",
-//         });
+router.get("/test", async (req, res) => {
+    try {
+        const { data, error } = await resend.emails.send({
+            from: "Acme <alexanderkeisha9@gmail.com>",
+            to: ["alexanderkeisha9@gmail.com"],
+            subject: "hello world",
+            html: "<strong>it works!</strong>",
+        });
 
-//         if (error) {
-//             return res.status(400).json({ error });
-//         }
+        if (error) {
+            return res.status(400).json({ error });
+        }
 
-//         res.status(200).json({ data });
-//     } catch (error) {
-//         res.status(500).json({ error: error.message });
-//     }
-// });
+        res.status(200).json({ data });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 
 
